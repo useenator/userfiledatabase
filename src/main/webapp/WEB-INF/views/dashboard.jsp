@@ -7,32 +7,37 @@
 
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Mes users</title>
+<title>My Files</title>
 </head>
 <body>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 
-<form method="POST" action="dashboard">
+
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <p>Welcome : ${pageContext.request.userPrincipal.name}
+            | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a></p>
+    </c:if>
+
+    <h3>Files</h3>
 	<table class="table table-striped">
-	<th>id</th>
-	<th>firstName</th>
-	<th>lastName</th>
-	<c:forEach items="${users}" var="user">
+	<th>name</th>
+	<th>size</th>
+	<th>upload</th>
+	<c:forEach items="${files}" var="file">
 	<tr>
-		<td>${user.id}</td>
-		<td>${user.firstName}</td>
-		<td>${user.lastName}</td>
+		<td>${file.name}</td>
+		<td>${file.size}</td>
+		<td>${file.uploadDate}</td>
 	</tr>
 	</c:forEach>
-		<tr>
-			<td><input type="submit" value="+"/></td>
-			<td><input type="text" name="firstName" /></td>
-			<td><input type="text" name="lastName" /></td>
-		</tr>
 	</table>
-</form>
+
+    <form method="POST" value="file">
+        <input type="file">
+    </form>
+
 </div>
 </div>
 </div>

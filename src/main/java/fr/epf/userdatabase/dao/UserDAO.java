@@ -38,7 +38,6 @@ public class UserDAO {
 		}
 	}
 	
-	
 	private EntityManager getEntityManager(){
 		return emf.createEntityManager();
 	}

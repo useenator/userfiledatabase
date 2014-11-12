@@ -14,7 +14,7 @@ public class File{
 	boolean private
 }
 ```
-* Permettre à un utilisateur d'uploader des fichiers sur le serveur
+* Permettre à un utilisateur d'uploader des fichiers sur le serveur (persiter ces informations dans la base SQL)
 * Permettre à l'utilisateur de consulter et télécharger ses fichiers
 
 ## API

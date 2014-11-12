@@ -27,7 +27,7 @@
 
   <Resource name="jdbc/userdatabase-ds" auth="Container" type="javax.sql.DataSource"
                maxActive="100" maxIdle="30" maxWait="10000"
-               username="jee-training" password="password" driverClassName="com.mysql.jdbc.Driver"
-               url="jdbc:mysql://localhost:3306/jee-training"/>
+               username="jee-training2" password="password" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/jee-training2"/>
 
 </Context>
